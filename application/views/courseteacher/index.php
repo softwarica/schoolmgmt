@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Tblcourseteacher Listing</h3>
+                <h3 class="box-title">Course & Teacher Listing</h3>
             	<div class="box-tools">
                     <a href="<?php echo site_url('courseteacher/add'); ?>" class="btn btn-success btn-sm">Add</a> 
                 </div>
@@ -25,7 +25,7 @@
 						<td><?php echo $t['teacher_id']; ?></td>
                         <td><?php echo $t['teacher_name']; ?></td>
 						<td>
-                         <!--    <a href="<?php echo site_url('courseteacher/edit/'.$t['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a>  -->
+                            <a href="<?php echo site_url('courseteacher/edit/'.$t['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
                             <a href="<?php echo site_url('courseteacher/remove/'.$t['id']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>
                         </td>
                     </tr>

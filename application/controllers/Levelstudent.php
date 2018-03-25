@@ -80,6 +80,8 @@ class Levelstudent extends CI_Controller{
             }
             else
             {
+                $data['level']=$this->Level_model->get_all_tbllevel(); 
+                $data['student']=$this->Student_model->get_all_tblstudent(); 
                 $data['_view'] = 'levelstudent/edit';
                 $this->load->view('layouts/main',$data);
             }

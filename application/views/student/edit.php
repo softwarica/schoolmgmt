@@ -2,7 +2,7 @@
     <div class="col-md-12">
       	<div class="box box-info">
             <div class="box-header with-border">
-              	<h3 class="box-title">Tblstudent Edit</h3>
+              	<h3 class="box-title">Student Edit</h3>
             </div>
 			<?php echo form_open('student/edit/'.$tblstudent['student_id']); ?>
 			<div class="box-body">

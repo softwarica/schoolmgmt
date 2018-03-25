@@ -28,9 +28,20 @@ class Course_model extends CI_Model
      */
     function get_tblcourse($course_id)
     {
-        return $this->db->get_where('tblcourse',array('course_id'=>$course_id))->row_array();
+        // return $this->db->get_where('tblcourse',array('course_id'=>$course_id))->row_array();
+         return $this->db->query("
+           select * FROM
+           tblcourse tc inner join tbllevel tl on tl.level_id=tc.level_id
+            where tc.course_id=$course_id
+            ")->row_array();
     }
-        
+    //     public function get_tblcourse_tbllevel($course_id){
+    //       return $this->db->query("
+    //         select * FROM
+    //         tblcourse tc inner join tbllevel tl on tl.level_id=tc.level_id
+    //         where tc.course_id=$course_id
+    //         ")->result_array();
+    // }  
     /*
      * Get all tblcourse
      */

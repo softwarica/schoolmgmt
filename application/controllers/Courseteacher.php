@@ -65,8 +65,8 @@ class Courseteacher extends CI_Controller{
         {
             $this->load->library('form_validation');
 
-			$this->form_validation->set_rules('course_id','Course Id','required|integer');
-			$this->form_validation->set_rules('teacher_id','Teacher Id','required|integer');
+			$this->form_validation->set_rules('course_id','Course Id','required');
+			$this->form_validation->set_rules('teacher_id','Teacher Id','required');
 		
 			if($this->form_validation->run())     
             {   
@@ -80,6 +80,8 @@ class Courseteacher extends CI_Controller{
             }
             else
             {
+                $data['course']=$this->Course_model->get_all_tblcourse(); 
+            $data['teacher']=$this->Teacher_model->get_all_tblteacher(); 
                 $data['_view'] = 'courseteacher/edit';
                 $this->load->view('layouts/main',$data);
             }

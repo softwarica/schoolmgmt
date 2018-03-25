@@ -16,7 +16,13 @@ class Levelstudent_model extends CI_Model
      */
     function get_tbllevelstudent($id)
     {
-        return $this->db->get_where('tbllevelstudent',array('id'=>$id))->row_array();
+        // return $this->db->get_where('tbllevelstudent',array('id'=>$id))->row_array();
+         return $this->db->query("
+            select tls.id,tls.level_id,tls.student_id,tl.level_name,ts.full_name as 'student_name' FROM
+            tbllevelstudent tls inner join tblstudent ts on tls.student_id=ts.student_id
+                                inner join tbllevel tl on tls.level_id=tl.level_id
+                                where tls.id=$id
+            ")->row_array();
     }
         
     /*
@@ -24,8 +30,13 @@ class Levelstudent_model extends CI_Model
      */
     function get_all_tbllevelstudent()
     {
-        $this->db->order_by('id', 'desc');
-        return $this->db->get('tbllevelstudent')->result_array();
+        // $this->db->order_by('id', 'desc');
+        // return $this->db->get('tbllevelstudent')->result_array();
+        return $this->db->query("
+            select tls.id,tls.level_id,tls.student_id,tl.level_name,ts.full_name as 'student_name' FROM
+            tbllevelstudent tls inner join tblstudent ts on tls.student_id=ts.student_id
+                                inner join tbllevel tl on tls.level_id=tl.level_id
+            ")->result_array();
     }
       function get_all_tbllevelstudent_tblstudent_tbllevel()
     {

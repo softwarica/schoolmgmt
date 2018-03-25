@@ -2,7 +2,7 @@
     <div class="col-md-12">
       	<div class="box box-info">
             <div class="box-header with-border">
-              	<h3 class="box-title">Tbllevel Edit</h3>
+              	<h3 class="box-title">Level Edit</h3>
             </div>
 			<?php echo form_open('level/edit/'.$tbllevel['level_id']); ?>
 			<div class="box-body">

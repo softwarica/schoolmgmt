@@ -17,7 +17,7 @@
         <!-- Theme style -->
         <link rel="stylesheet" href="<?php echo site_url('resources/css/AdminLTE.min.css');?>">
         <!-- AdminLTE Skins. Choose a skin from the css/skins
-             folder instead of downloading all of them to reduce the load. -->
+             folder instead of downloadming all of them to reduce the load. -->
         <link rel="stylesheet" href="<?php echo site_url('resources/css/_all-skins.min.css');?>">
     </head>
     
@@ -47,7 +47,7 @@
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="<?php echo site_url('resources/img/admin.jpg');?>" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Kisan budhathoki</span>
+                                    <span class="hidden-xs">bidyamath english school</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
@@ -55,7 +55,7 @@
                                         <img src="<?php echo site_url('resources/img/admin.jpg');?>" class="img-circle" alt="User Image">
 
                                     <p>
-                                        Kisan budhathoki - Web Developer
+                                        bidyamath english school - Web Developer
                                         <small>Member since Nov. 2012</small>
                                     </p>
                                     </li>
@@ -84,7 +84,7 @@
                             <img src="<?php echo site_url('resources/img/admin.jpg');?>" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Kisan budhathoki</p>
+                            <p>bidyamath english school</p>
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                         </li>
 						<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Courseteacher</span>
+                                <i class="fa fa-desktop"></i> <span>enroll teacher</span>
                             </a>
                             <ul class="treeview-menu">
 								<li class="active">
@@ -137,7 +137,7 @@
                         </li>
 						<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Levelstudent</span>
+                                <i class="fa fa-desktop"></i> <span>enroll student</span>
                             </a>
                             <ul class="treeview-menu">
 								<li class="active">

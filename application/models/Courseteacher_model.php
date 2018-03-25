@@ -16,7 +16,13 @@ class Courseteacher_model extends CI_Model
      */
     function get_tblcourseteacher($id)
     {
-        return $this->db->get_where('tblcourseteacher',array('id'=>$id))->row_array();
+        // return $this->db->get_where('tblcourseteacher',array('id'=>$id))->row_array();
+         return $this->db->query("
+            select tct.id,tct.course_id,tct.teacher_id,tc.course_name,tt.full_name as 'teacher_name' FROM
+            tblcourseteacher tct inner join tblteacher tt on tct.teacher_id=tt.teacher_id
+                                inner join tblcourse tc on tct.course_id=tc.course_id
+                                where tct.id=$id
+            ")->row_array();
     }
         
     /*

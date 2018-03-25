@@ -60,14 +60,15 @@ class Course extends CI_Controller{
     {   
         // check if the tblcourse exists before trying to edit it
         $data['tblcourse'] = $this->Course_model->get_tblcourse($course_id);
+        $data['level']=$this->Level_model->get_all_tbllevel();
         
         if(isset($data['tblcourse']['course_id']))
         {
             $this->load->library('form_validation');
 
-			$this->form_validation->set_rules('id','ID','required|integer');
+			// $this->form_validation->set_rules('id','ID','required|integer');
 			$this->form_validation->set_rules('course_name','Course Name','required|max_length[100]');
-			$this->form_validation->set_rules('level_id','Level Id','required|integer');
+			$this->form_validation->set_rules('level_id','Level Id','required');
 		
 			if($this->form_validation->run())     
             {   
